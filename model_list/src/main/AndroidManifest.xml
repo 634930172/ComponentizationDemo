@@ -1,2 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.john.listmodel" />
+    package="com.john.listmodel">
+
+    <application android:theme="@style/AppTheme">
+        <activity android:name=".ListAct"/>
+    </application>
+
+
+</manifest>
