@@ -1,4 +1,4 @@
-package com.john.moremodel;
+package com.john.mainmodel;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,18 +11,19 @@ import com.github.mzule.activityrouter.annotation.Router;
 /**
  * Author: John
  * E-mail: 634930172@qq.com
- * Date: 2019/1/4 16:07
+ * Date: 2019/1/7 13:43
  * <p/>
  * Description:
  */
-@Router(value = "more/:name/:age", stringParams = "name", intParams = "age")
-public class MoreAct extends AppCompatActivity {
-    private static final String TAG = "MoreAct";
 
+@Router(value = "test/:name/:age", stringParams = "name", intParams = "age")
+public class TestAct extends AppCompatActivity {
+
+    private static final String TAG = "TestAct";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.more_act_layout);
+        setContentView(R.layout.test_act_layout);
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         int age = intent.getIntExtra("age", -1);

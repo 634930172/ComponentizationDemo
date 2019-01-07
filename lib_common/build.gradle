@@ -47,5 +47,7 @@ dependencies {
     //leakCanary
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    //ARouter 后期改为阿里的router实现跨组件通信
+    api 'com.github.mzule.activityrouter:activityrouter:1.2.2'
 
 }

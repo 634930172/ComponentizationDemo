@@ -3,4 +3,17 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!--manifest清单的合并后面再涉及-->
+    <application>
+        <activity
+            android:name="com.github.mzule.activityrouter.router.RouterActivity"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="john" /><!--改成自己的scheme-->
+            </intent-filter>
+        </activity>
+    </application>
+
 </manifest>

@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.github.mzule.activityrouter.annotation.Router;
+@Router(value = "launcher/:name",stringParams = "name")
 public class LauncherActivity extends AppCompatActivity {
 
     private static final String TAG = "LauncherActivity";
@@ -13,6 +15,8 @@ public class LauncherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.launcher_layout);
+        String name=getIntent().getStringExtra("name");
+        Log.e(TAG, "onCreate:------ "+name );
     }
 
     /**

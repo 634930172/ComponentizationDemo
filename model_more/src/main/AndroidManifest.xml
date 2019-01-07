@@ -1,7 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.john.moremodel">
 
-    <application android:theme="@style/AppTheme">
+    <application android:theme="@style/AppTheme"
+        >
         <activity android:name=".MoreAct" />
+
     </application>
 </manifest>
