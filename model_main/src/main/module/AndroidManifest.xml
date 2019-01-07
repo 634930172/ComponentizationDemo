@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TestAct" />
-
+        <activity android:name=".SplashAct"/>
     </application>
 
 </manifest>
