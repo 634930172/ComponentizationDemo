@@ -2,8 +2,6 @@ package com.john.componentization_demo;
 
 
 import android.util.Log;
-
-import com.github.mzule.activityrouter.annotation.Module;
 import com.github.mzule.activityrouter.annotation.Modules;
 import com.john.common.BaseApplication;
 
