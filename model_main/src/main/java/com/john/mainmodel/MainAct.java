@@ -17,8 +17,6 @@ import com.alibaba.android.arouter.launcher.ARouter;
  * <p/>
  * Description:
  */
-
-//@Router(value = "main/:name/:age", stringParams = "name", intParams = "age")
 @Route(path = "/main/MainAct")
 public class MainAct extends AppCompatActivity {
 

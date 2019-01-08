@@ -8,7 +8,6 @@ import android.view.View;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 
-//@Router(value = "launcher/:name",stringParams = "name")
 @Route(path = "/app/LauncherActivity")
 public class LauncherActivity extends AppCompatActivity {
 

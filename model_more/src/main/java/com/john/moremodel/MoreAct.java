@@ -17,8 +17,8 @@ import com.alibaba.android.arouter.launcher.ARouter;
  * <p/>
  * Description:
  */
-//@Router(value = "more/:name/:age", stringParams = "name", intParams = "age")
-    @Route(path = "/more/MoreAct")
+
+@Route(path = "/more/MoreAct")
 public class MoreAct extends AppCompatActivity {
     private static final String TAG = "MoreAct";
 
@@ -33,7 +33,7 @@ public class MoreAct extends AppCompatActivity {
     }
 
     //到list组件
-    public void goList(View view){
+    public void goList(View view) {
         ARouter.getInstance().build("/list/listAct").navigation();
     }
 }
