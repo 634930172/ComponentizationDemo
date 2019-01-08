@@ -49,8 +49,11 @@ ext{
     butterknifeCompiler='8.8.1'
     leakcanaryAndroid='1.5.4'
     leakcanaryAndroidNOp='1.5.4'
+    //ARouter
     activityAouter='1.2.2'
     activityrouterCompiler='1.1.7'
-
+    //AliRouter
+    alibabaArouterApi='1.4.1'
+    alibabaArouterCompiler='1.2.2'
 
 }

@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
+
 /**
  * Author: John
  * E-mail: 634930172@qq.com
@@ -11,8 +13,8 @@ import android.support.v7.app.AppCompatActivity;
  * <p/>
  * Description:
  */
+@Route(path = "/list/listAct")
 public class ListAct extends AppCompatActivity {
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

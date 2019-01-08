@@ -7,10 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
-import com.github.mzule.activityrouter.annotation.Router;
-import com.github.mzule.activityrouter.router.Routers;
-import com.john.common.network.client.HttpClient;
-
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
 
 /**
  * Author: John
@@ -20,7 +18,8 @@ import com.john.common.network.client.HttpClient;
  * Description:
  */
 
-@Router(value = "main/:name/:age", stringParams = "name", intParams = "age")
+//@Router(value = "main/:name/:age", stringParams = "name", intParams = "age")
+@Route(path = "/main/MainAct")
 public class MainAct extends AppCompatActivity {
 
     private static final String TAG = "MainAct";
@@ -38,19 +37,27 @@ public class MainAct extends AppCompatActivity {
     //跳转到更多组件去
     public void goMore(View view) {
         Log.e(TAG, "goMore: -----------------");
-        Routers.open(this, "john://more/john/26");
+        //        Routers.open(this, "john://more/john/26");
+        ARouter.getInstance().build("/more/MoreAct").
+                withString("name", "john").withInt("age", 330).
+                navigation();
     }
 
     //跳转到本地组件
     public void goTest(View view) {
         Log.e(TAG, "goTest: -----------------");
-        Routers.open(this, "john://test/mary/22");
+        //        Routers.open(this, "john://test/mary/22");
+        ARouter.getInstance().build("/main/TestAct").
+                withString("name", "john").withInt("age", 3377).
+                navigation();
     }
 
 
-
-    public void goLauncher(View view){
-        Routers.open(this, "john://launcher/meme");
+    public void goLauncher(View view) {
+        //        Routers.open(this, "john://launcher/meme");
+        ARouter.getInstance().build("/app/LauncherActivity").
+                withString("name", "john").withInt("age", 33).
+                navigation();
     }
 
 }

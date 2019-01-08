@@ -1,8 +1,6 @@
 package com.john.componentization_demo;
 
-
 import android.util.Log;
-import com.github.mzule.activityrouter.annotation.Modules;
 import com.john.common.BaseApplication;
 
 /**
@@ -12,7 +10,7 @@ import com.john.common.BaseApplication;
  * <p/>
  * Description:
  */
-@Modules({"model_main", "model_list", "model_more","model_app"})
+//@Modules({"model_main", "model_list", "model_more","model_app"})
 public class MyApplication extends BaseApplication {
 
     private static final String TAG="MyApplication";

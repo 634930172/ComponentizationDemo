@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 
-import com.github.mzule.activityrouter.annotation.Router;
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
 
 /**
  * Author: John
@@ -15,7 +17,8 @@ import com.github.mzule.activityrouter.annotation.Router;
  * <p/>
  * Description:
  */
-@Router(value = "more/:name/:age", stringParams = "name", intParams = "age")
+//@Router(value = "more/:name/:age", stringParams = "name", intParams = "age")
+    @Route(path = "/more/MoreAct")
 public class MoreAct extends AppCompatActivity {
     private static final String TAG = "MoreAct";
 
@@ -27,5 +30,10 @@ public class MoreAct extends AppCompatActivity {
         String name = intent.getStringExtra("name");
         int age = intent.getIntExtra("age", -1);
         Log.e(TAG, "onCreate: name= " + name + " age= " + age);
+    }
+
+    //到list组件
+    public void goList(View view){
+        ARouter.getInstance().build("/list/listAct").navigation();
     }
 }

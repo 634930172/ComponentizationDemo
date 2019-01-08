@@ -30,7 +30,6 @@ dependencies {
     testImplementation "junit:junit:$rootProject.ext.junit"
     androidTestImplementation "com.android.support.test:runner:$rootProject.ext.runner"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoCore"
-    //暂时没有处理第三方库重复依赖support库的问题
     //Network
     api "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit"
     api "com.google.code.gson:gson:$rootProject.ext.gson"
@@ -46,7 +45,11 @@ dependencies {
     //leakCanary
     debugApi "com.squareup.leakcanary:leakcanary-android:$rootProject.ext.leakcanaryAndroid"
     releaseApi "com.squareup.leakcanary:leakcanary-android-no-op:$rootProject.ext.leakcanaryAndroidNOp"
-    //ARouter 后期改为阿里的router实现跨组件通信
-    api "com.github.mzule.activityrouter:activityrouter:$rootProject.ext.activityAouter"
-
+    //ARouter
+//    api "com.github.mzule.activityrouter:activityrouter:$rootProject.ext.activityAouter"
+    //阿里的router实现跨组件通信 他依赖了25.2.0排除掉
+    api ("com.alibaba:arouter-api:$rootProject.ext.alibabaArouterApi"){
+        exclude module: 'support-v4'//根据组件名排除
+        exclude group: 'android.support.v4'//根据包名排除
+    }
 }

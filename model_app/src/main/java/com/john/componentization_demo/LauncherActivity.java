@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.github.mzule.activityrouter.annotation.Router;
-@Router(value = "launcher/:name",stringParams = "name")
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
+
+//@Router(value = "launcher/:name",stringParams = "name")
+@Route(path = "/app/LauncherActivity")
 public class LauncherActivity extends AppCompatActivity {
 
     private static final String TAG = "LauncherActivity";
@@ -30,7 +33,7 @@ public class LauncherActivity extends AppCompatActivity {
      * 跳转列表页面
      */
     public void list(View view) {
-        Log.e(TAG, "list: ");
+        ARouter.getInstance().build("/list/listAct").navigation();
     }
 
     /**

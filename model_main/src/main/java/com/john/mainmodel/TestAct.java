@@ -6,7 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.github.mzule.activityrouter.annotation.Router;
+import com.alibaba.android.arouter.facade.annotation.Route;
 
 /**
  * Author: John
@@ -16,7 +16,8 @@ import com.github.mzule.activityrouter.annotation.Router;
  * Description:
  */
 
-@Router(value = "test/:name/:age", stringParams = "name", intParams = "age")
+//@Router(value = "test/:name/:age", stringParams = "name", intParams = "age")
+    @Route(path = "/main/TestAct")
 public class TestAct extends AppCompatActivity {
 
     private static final String TAG = "TestAct";
