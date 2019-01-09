@@ -2,7 +2,8 @@ package debug;
 
 import android.util.Log;
 
-import com.john.common.LeakApplication;
+import com.john.common.BaseApplication;
+
 
 /**
  * Author: John
@@ -11,7 +12,7 @@ import com.john.common.LeakApplication;
  * <p/>
  * Description:
  */
-public class ListApplication extends LeakApplication {
+public class ListApplication extends BaseApplication {
 
     private static final String TAG="ListApplication";
 

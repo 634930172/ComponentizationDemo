@@ -4,7 +4,6 @@ package debug;
 import android.util.Log;
 
 import com.john.common.BaseApplication;
-import com.john.common.LeakApplication;
 
 /**
  * Author: John
@@ -13,7 +12,7 @@ import com.john.common.LeakApplication;
  * <p/>
  * Description:
  */
-public class MainApplication extends LeakApplication {
+public class MainApplication extends BaseApplication {
 
     private static final String TAG="MainApplication";
 
