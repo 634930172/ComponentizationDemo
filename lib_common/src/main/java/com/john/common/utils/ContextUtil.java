@@ -11,6 +11,8 @@ import android.content.Context;
  * Description: application_context 工具类
  */
 //1111111111
+
+//2222222222
 public class ContextUtil {
     private static Context APPLICATION_CONTEXT;
 
