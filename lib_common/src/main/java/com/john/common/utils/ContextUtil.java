@@ -12,7 +12,7 @@ import android.content.Context;
  */
 //1111111111
 
-//2222222222
+//2222222222 哈哈
 public class ContextUtil {
     private static Context APPLICATION_CONTEXT;
 
