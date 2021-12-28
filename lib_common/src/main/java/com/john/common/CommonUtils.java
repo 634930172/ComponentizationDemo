@@ -1,5 +1,7 @@
 package com.john.common;
 
+import android.os.Handler;
+
 /**
  * Author: John
  * E-mail: 634930172@qq.com
